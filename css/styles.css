@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  grid-area: header;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  header img {
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 1s all; }
+    header img:hover {
+      height: 110px;
+      margin-left: 5px; }
+  header .navlogo {
+    display: block;
+    width: 75%; }
+  header .navbar {
+    background-color: transparent !important; }
+
+.grillaPaginas {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 1200px;
+  grid-template-rows: 10% 87% 3%;
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
+
+footer {
+  grid-area: footer;
+  text-align: right;
+  background-color: #f3d1e3; }
+  footer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-top: 8px;
+    padding-right: 12px;
+    color: #1b1b1b; }
+
+.backgroundIndex {
+  background-image: url(../babyx.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1200px; }
+
+.filtroFondo {
+  height: 100%;
+  backdrop-filter: blur(3px);
+  grid-area: unset; }
+
+main {
+  grid-area: main; }
+  main .textoPrincipal {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto; }
+  main .titulos, main .tituloIndex {
+    color: #0d0d0e;
+    font-size: 46px;
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  main .parrafos, main .parrafoIndex {
+    font-size: large;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: light;
+    color: #0d0d0e;
+    margin-left: auto;
+    margin-right: auto; }
+  main .parrafoIndex {
+    color: #fcfafd; }
+  main .tituloIndex {
+    font-size: 54px;
+    color: #fcfafd; }
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }

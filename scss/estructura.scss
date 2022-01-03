@@ -1,0 +1,9 @@
+.grillaPaginas{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    height: 1200px;
+    grid-template-rows: 10% 87% 3%;
+    grid-template-areas: "header header header header"
+                        "main main main main"
+                        "footer footer footer footer";
+}
