@@ -1,0 +1,30 @@
+form{
+    .botonEnviar{
+        background-color: rgb(233, 113, 177);
+        margin-top: 60px;
+        margin-bottom: 16px;
+        font-weight: bold;
+        margin-left: 52px;
+         }
+    .campoForm{
+        background-color: rgb(243, 209, 227);
+        padding: 12px 60px 12px 60px;
+        border-style: solid;
+        border-width: thin;
+        border-color: white;
+    }
+    .campoUno{
+        @extend .campoForm;
+        margin-right: 5px;
+        
+    }
+    .campoDos{
+        @extend .campoForm;
+        margin-left: 5px;
+    }
+    .textoAclaracion{
+        @extend .parrafos;
+        font-size: x-small !important;
+        color: gray;
+    }
+}
