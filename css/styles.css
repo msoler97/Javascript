@@ -28,6 +28,7 @@ header {
   grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
 
 footer {
+  grid-area: footer;
   text-align: right;
   background-color: #f3d1e3; }
   footer p {
@@ -35,14 +36,19 @@ footer {
     font-weight: 500;
     padding-top: 8px;
     padding-right: 12px;
-    color: #1b1b1b; }
+    color: #1b1b1b;
+    margin-bottom: 0px; }
 
 form .botonEnviar {
   background-color: #e971b1;
+  font-weight: bold;
   margin-top: 60px;
   margin-bottom: 16px;
-  font-weight: bold;
-  margin-left: 52px; }
+  margin-left: auto;
+  margin-right: auto; }
+
+form .botonForm {
+  display: flex; }
 
 form .campoForm, form .campoUno, form .campoDos {
   background-color: #f3d1e3;
@@ -103,6 +109,9 @@ main .principal {
   width: 100%;
   margin-top: 40px; }
 
+main .rowEmojis {
+  margin-top: 20px; }
+
 main .emojis {
   max-height: 140px; }
 
@@ -122,7 +131,10 @@ main .animacionTres {
 
 main .textoEmojis, main .emojiUno, main .emojiDos, main .emojiTres {
   padding-top: 40px;
-  border-top: 1px solid black; }
+  border-top: 1px solid black;
+  transition: 2s all; }
+  main .textoEmojis:hover, main .emojiUno:hover, main .emojiDos:hover, main .emojiTres:hover {
+    font-weight: bold; }
 
 main .emojiUno {
   text-align: right;
@@ -136,7 +148,7 @@ main .emojiDos {
 
 main .emojiTres {
   text-align: left;
-  border-left: 1px solid black;
+  border-right: 1px solid black;
   padding-left: 28px;
   margin-bottom: 40px; }
 
@@ -237,6 +249,26 @@ main .emojiTres {
     transform: translateX(0);
     opacity: 1; } }
 
+.rotate-center {
+  -webkit-animation: rotate-center 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+  animation: rotate-center 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate; }
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(20deg); } }
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(20deg); } }
+
 @media only screen and (min-width: 1200px) {
   .principal {
     height: 580px; } }
@@ -251,11 +283,13 @@ main .emojiTres {
 
 @media only screen and (max-width: 992px) {
   .fondoIndex {
-    background-size: contain; }
+    background-size: cover; }
   .principal {
     max-height: 360px; } }
 
 @media only screen and (max-width: 768px) {
+  .fondoIndex {
+    background-size: contain; }
   .parrafoIndex {
     font-size: smaller !important; }
   .principal {
@@ -266,7 +300,9 @@ main .emojiTres {
   .carouselDos {
     display: block;
     height: auto;
-    justify-self: center; } }
+    justify-self: center; }
+  .campoDos {
+    margin-left: 85px !important; } }
 
 @media only screen and (max-width: 600px) {
   .principal {
@@ -274,4 +310,14 @@ main .emojiTres {
     .principal .tituloIndex {
       color: #0d0d0e; }
     .principal .parrafoIndex {
-      color: #0d0d0e; } }
+      color: #0d0d0e; }
+  .emojis {
+    max-height: 94px !important; }
+  .textoEmojis, main .emojiUno, main .emojiDos, main .emojiTres {
+    font-size: large; }
+  .campoDos {
+    margin-left: 0px !important; } }
+
+@media only screen and (max-width: 500px) {
+  .parrafoIndex {
+    margin-bottom: 40px; } }

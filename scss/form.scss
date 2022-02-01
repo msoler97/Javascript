@@ -1,11 +1,16 @@
 form{
     .botonEnviar{
         background-color: rgb(233, 113, 177);
+        font-weight: bold;
         margin-top: 60px;
         margin-bottom: 16px;
-        font-weight: bold;
-        margin-left: 52px;
-         }
+        margin-left: auto;
+        margin-right: auto;
+        
+        }
+        .botonForm{
+            display: flex;
+        }
     .campoForm{
         background-color: rgb(243, 209, 227);
         padding: 12px 60px 12px 60px;

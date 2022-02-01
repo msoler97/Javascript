@@ -1,5 +1,5 @@
 footer{
-    grid-area: footer;
+  grid-area: footer;
     text-align: right;
     background-color: rgb(243, 209, 227);   
     p{
@@ -8,5 +8,6 @@ footer{
       padding-top: 8px;
       padding-right: 12px;
       color: rgb(27, 27, 27);
+      margin-bottom: 0px;
     }
 }
